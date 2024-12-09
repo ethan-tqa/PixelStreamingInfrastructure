@@ -583,6 +583,16 @@ export class Application {
 
     onPlayStream() {
         this.hideCurrentOverlay();
+
+        this.stream.emitCommand({
+            ConsoleCommand: 'DisableAllScreenMessages'
+        });
+        this.stream.emitCommand({
+            ConsoleCommand: 'stat fps'
+        });
+        this.stream.emitCommand({
+            ConsoleCommand: 'CustomOpenMap West_WP_v9'
+        });
     }
 
     onPlayStreamError(message: string) {
