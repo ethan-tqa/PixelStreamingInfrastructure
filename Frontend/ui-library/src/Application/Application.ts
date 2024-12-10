@@ -590,9 +590,9 @@ export class Application {
         this.stream.emitCommand({
             ConsoleCommand: 'stat fps'
         });
-        this.stream.emitCommand({
-            ConsoleCommand: 'CustomOpenMap West_WP_v9'
-        });
+        // this.stream.emitCommand({
+        //     ConsoleCommand: 'CustomOpenMap West_WP_v9'
+        // });
     }
 
     onPlayStreamError(message: string) {
