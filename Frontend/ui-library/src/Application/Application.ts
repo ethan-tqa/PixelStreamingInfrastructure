@@ -594,7 +594,9 @@ export class Application {
             Command: "SetupStreamingConfigs"
         });
 
-        console.log('test')
+        this.stream.emitUIInteraction({
+            Command: "PlayGreetingSequence"
+        });
     }
 
     onPlayStreamError(message: string) {
