@@ -590,6 +590,18 @@ export class Application {
 
     onPlayStream() {
         this.hideCurrentOverlay();
+        
+        this.stream.emitUIInteraction({
+            Command: "DisableDebugMsg"
+        });
+
+        this.stream.emitUIInteraction({
+            Command: "SetupStreamingConfigs"
+        });
+
+        this.stream.emitUIInteraction({
+            Command: "PlayGreetingSequence"
+        });
     }
 
     onPlayStreamError(message: string) {
